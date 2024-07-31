@@ -12,14 +12,14 @@ export async function middleware(request: NextRequest) {
 
   if (isLoginPage) {
     if (accessToken && refreshToken) {
-      return NextResponse.redirect(new URL("/", request.url));
+      return NextResponse.redirect(new URL("/admin", request.url));
     }
     return;
   }
 
   if (isAdminPage) {
     if (!refreshToken && !accessToken) {
-      return NextResponse.redirect(new URL("/login", request.url));
+      return NextResponse.redirect(new URL("/admin/login", request.url));
     }
 
     if (refreshToken && !accessToken) {
@@ -35,7 +35,7 @@ export async function middleware(request: NextRequest) {
       const result = await response.json();
 
       if (!result.admin) {
-        return NextResponse.redirect(new URL("/login", request.url));
+        return NextResponse.redirect(new URL("/admin/login", request.url));
       }
 
       const responseNext = NextResponse.next();
