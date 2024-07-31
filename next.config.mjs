@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    basePath: '/admin',
     reactStrictMode: false,
     images: { remotePatterns: [
             process.env.NODE_ENV === 'development'
