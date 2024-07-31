@@ -11,7 +11,7 @@ const MainLayout: FC<PropsWithChildren> = ({ children }) => {
         <Container>
           <div className={styles.headerBox}>
             <div className={styles.logo}>
-              <MyLink href={"/"}>
+              <MyLink href={"/admin"}>
                 <span className={styles.logoPt1}>Holo</span>
                 <span className={styles.logoPt2}>TV</span>
               </MyLink>

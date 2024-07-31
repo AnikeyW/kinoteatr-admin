@@ -19,7 +19,7 @@ export async function middleware(request: NextRequest) {
 
   if (isAdminPage) {
     if (!refreshToken && !accessToken) {
-      return NextResponse.redirect(new URL("/login", request.url));
+      return NextResponse.redirect(new URL("/admin/login", request.url));
     }
 
     if (refreshToken && !accessToken) {
@@ -35,7 +35,7 @@ export async function middleware(request: NextRequest) {
       const result = await response.json();
 
       if (!result.admin) {
-        return NextResponse.redirect(new URL("/login", request.url));
+        return NextResponse.redirect(new URL("/admin/login", request.url));
       }
 
       const responseNext = NextResponse.next();
@@ -93,5 +93,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/:path*", "/login/:path*"],
+  matcher: ["/admin/:path*", "/login/:path*"],
 };

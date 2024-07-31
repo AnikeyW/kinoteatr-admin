@@ -35,7 +35,7 @@ const AdminPageLayout: FC<PropsWithChildren> = ({ children }) => {
     } catch (e) {
       console.log(e);
     } finally {
-      router.push("/login");
+      router.push("/admin/login");
     }
   };
 

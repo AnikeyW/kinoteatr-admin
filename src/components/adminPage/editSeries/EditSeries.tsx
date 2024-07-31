@@ -13,7 +13,7 @@ const EditSeries: FC<Props> = ({ seriesDetails }) => {
   return (
     <div className={styles.root}>
       <div className={styles.backLink}>
-        <MyLink href={"/series"}>К списку сериалов</MyLink>
+        <MyLink href={"/admin/series"}>К списку сериалов</MyLink>
       </div>
 
       <div className={styles.pageTitle}>Редактирование сериала</div>
