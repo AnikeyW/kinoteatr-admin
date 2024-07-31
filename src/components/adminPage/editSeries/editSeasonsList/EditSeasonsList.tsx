@@ -55,7 +55,7 @@ const EditSeasonsList: FC<Props> = ({ seasons, seriesId }) => {
               <MyButton
                 onClick={() =>
                   router.push(
-                    `/admin/series/edit/${seriesId}/season/${season.id}`,
+                    `/series/edit/${seriesId}/season/${season.id}`,
                   )
                 }
               >

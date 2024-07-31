@@ -27,7 +27,7 @@ const SeriesItem: FC<Props> = ({ seriesItem }) => {
 
       <MyButton
         onClick={() => {
-          router.push(`/admin/series/edit/${seriesItem.id}`);
+          router.push(`/series/edit/${seriesItem.id}`);
         }}
       >
         Редактировать
