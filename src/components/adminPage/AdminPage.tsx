@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import styles from "./AdminPage.module.scss";
 
 const AdminPage = () => {
-  redirect("/admin/series");
+  redirect("/series");
 
   return (
     <div className={styles.root}>

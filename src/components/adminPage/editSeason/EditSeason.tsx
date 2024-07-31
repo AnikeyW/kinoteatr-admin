@@ -13,7 +13,7 @@ const EditSeason: FC<Props> = ({ seasonDetails }) => {
   return (
     <div className={styles.root}>
       <div className={styles.backLink}>
-        <MyLink href={`/admin/series/edit/${seasonDetails.seriesId}`}>
+        <MyLink href={`/series/edit/${seasonDetails.seriesId}`}>
           К сериалу
         </MyLink>
       </div>

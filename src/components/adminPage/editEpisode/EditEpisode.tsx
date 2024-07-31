@@ -14,7 +14,7 @@ const EditEpisode: FC<Props> = ({ episodeDetails, seriesId, seasonId }) => {
   return (
     <div className={styles.root}>
       <div className={styles.backLink}>
-        <MyLink href={`/admin/series/edit/${seriesId}/season/${seasonId}`}>
+        <MyLink href={`/series/edit/${seriesId}/season/${seasonId}`}>
           К сезону
         </MyLink>
       </div>
