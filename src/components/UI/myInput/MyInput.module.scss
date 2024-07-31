@@ -1,0 +1,12 @@
+.root{
+  width: 100%;
+  outline: none;
+  border-radius: 0.25rem;
+  border: none;
+  height: 24px;
+  background-color: var(--bgc-section);
+
+  &:focus{
+    border: 1px solid #265d63;
+  }
+}

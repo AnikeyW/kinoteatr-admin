@@ -1,0 +1,54 @@
+.root {
+  display: flex;
+  gap: 1rem;
+
+  .posterBox{
+
+    .poster{
+      width: 200px;
+      height: 296px;
+      margin-bottom: 0.25rem;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .changePosterBtn{
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+
+    .input{
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+
+      span {
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      .deleteParagraphBtn{
+        cursor: pointer;
+      }
+    }
+
+    .addParagraphBtn{
+      margin-bottom: 0.5rem;
+    }
+
+    .addBtn{
+      margin-top: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

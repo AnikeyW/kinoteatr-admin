@@ -1,0 +1,83 @@
+:root {
+  --header-height: 50px;
+  --nav-height: 50px;
+
+  --bgc-header: #212121;
+  --bgc-page: #1c1c1c;
+  --bgc-section: #121212;
+
+  --item-card-bg: #1c1c1c;
+  --item-card-bg-hover: #121212;
+
+  --link-color: #cecece;
+  --link-color-hover: #e8e8e8;
+
+  --main-color: #265d63;
+
+  --text-color: #c9c9c9;
+  --text-color-soft: #a8a8a8;
+  --text-color-light: #e1e1e1;
+
+  --block-bg: #2d2d2d;
+
+  --btn-bg: #01a0c4;
+  --btn-bg-hover: #008faf;
+  --btn-color: white;
+  --action-btn-bg: #00af12;
+  --action-btn-bg-hover: #009a0f;
+  --error-btn-bg: #c50000;
+  --error-btn-bg-hover: #a80000;
+}
+
+*{
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  background-color: var(--bgc-header);
+}

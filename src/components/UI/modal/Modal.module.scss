@@ -1,0 +1,19 @@
+.root{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  .content{
+    width: fit-content;
+    padding: 1rem;
+    background-color: var(--bgc-page);
+    border-radius: 0.5rem;
+  }
+}

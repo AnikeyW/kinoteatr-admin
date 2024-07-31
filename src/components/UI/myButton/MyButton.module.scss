@@ -1,0 +1,35 @@
+.root {
+  padding: 7px 20px;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 100ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: var(--btn-bg-hover);
+  }
+
+  &:disabled{
+    background-color: #b9b9b9;
+    cursor: not-allowed;
+  }
+}
+
+.action {
+  background-color: var(--action-btn-bg);
+
+  &:not(:disabled):hover {
+    background-color: var(--action-btn-bg-hover);
+  }
+}
+
+.error {
+  background-color: var(--error-btn-bg);
+
+  &:not(:disabled):hover {
+    background-color: var(--error-btn-bg-hover);
+  }
+}

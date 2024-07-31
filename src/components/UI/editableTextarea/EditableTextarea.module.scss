@@ -1,0 +1,30 @@
+.title{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  word-break: break-word;
+  min-height: 10px;
+}
+
+.textarea{
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  font-family: inherit;
+  line-height: inherit;
+
+  &:focus {
+    box-shadow: none;
+    background-color: inherit;
+    border: 1px solid #dcdcdc;
+    border-radius: 0.25rem;
+    resize: vertical;
+    overflow: auto;
+  }
+}
+
+.label{
+  font-size: 14px;
+}

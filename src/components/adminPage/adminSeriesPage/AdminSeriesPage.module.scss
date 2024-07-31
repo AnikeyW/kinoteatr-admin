@@ -1,0 +1,23 @@
+.root{
+  padding: 0.25rem;
+  width: 100%;
+
+  .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .search{
+      width: 300px;
+    }
+
+    .addSeriesBtn{}
+  }
+
+  .seriesList{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

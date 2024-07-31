@@ -1,0 +1,9 @@
+.root{
+  text-decoration: none;
+  color: var(--link-color);
+  transition: color 0.2s ease-in-out;
+
+  &:hover{
+    color: var(--link-color-hover);
+  }
+}

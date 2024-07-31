@@ -1,0 +1,59 @@
+.root {
+  display: flex;
+  gap: 1rem;
+
+  .files{
+
+    .changeVideoBtn{}
+
+    .selectSubsBtn{
+      margin: 0.5rem 0;
+    }
+  }
+
+  .info{
+    width: 600px;
+
+    @media screen and (max-width: 992px){
+      width: 500px;
+    }
+
+    @media screen and (max-width: 768px){
+      width: 300px;
+    }
+
+    @media screen and (max-width: 480px){
+      width: 300px;
+    }
+
+    .input{
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-bottom: 0.5rem;
+
+      span {
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      .deleteParagraphBtn{
+        cursor: pointer;
+      }
+    }
+
+    .bottom{
+      margin-top: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.5rem;
+
+      .progress{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

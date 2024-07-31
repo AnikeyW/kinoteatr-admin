@@ -1,0 +1,43 @@
+.root{
+
+  .listTitle{
+    display: flex;
+    justify-content: center;
+  }
+
+  .list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+
+    .listItem{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      background-color: var(--block-bg);
+      border-radius: 0.5rem;
+      padding: 0 0.5rem;
+
+      .itemInfo{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .itemPoster{
+          position: relative;
+          width: 80px;
+          height: 50px;
+        }
+
+        .itemTitle{}
+      }
+
+      .btns{
+        display: flex;
+        gap: 0.5rem;
+      }
+    }
+  }
+}

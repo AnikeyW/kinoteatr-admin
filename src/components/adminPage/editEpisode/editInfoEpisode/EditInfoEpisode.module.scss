@@ -1,0 +1,93 @@
+.root{
+
+  .info{
+    display: flex;
+    gap: 0.5rem;
+
+    .poster{
+      width: 320px;
+      aspect-ratio: 5/3;
+      background: #b9b9b9;
+      position: relative;
+
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .details{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .title{
+        font-weight: 600;
+        margin-bottom: .5rem;
+      }
+
+      .order{
+        margin-bottom: .5rem;
+      }
+
+      .subtitles{
+        display: flex;
+        gap: 10px;
+        margin-bottom: .5rem;
+
+        ul {
+          list-style: inside;
+
+          li {
+            display: flex;
+            justify-content: space-between;
+
+            div {
+              cursor: pointer;
+              
+              svg {
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .description{
+    margin-bottom: .5rem;
+
+    small {
+      margin-bottom: 0.5rem;
+    }
+
+    .paragraph{
+      display: flex;
+      margin-bottom: 0.5rem;
+
+      .textArea {
+        flex: auto;
+
+        textarea::placeholder {
+          color: #999;
+          opacity: 1;
+        }
+      }
+
+      .deleteParagraphBtn{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .saveBtn{
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .postersList{
+    margin-top: 1rem;
+  }
+}

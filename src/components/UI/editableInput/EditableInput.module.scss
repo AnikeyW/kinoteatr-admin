@@ -1,0 +1,23 @@
+.title{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.input{
+  outline: none;
+  font-size: 16px;
+  width: min-content;
+
+  &:focus {
+    border: none;
+    box-shadow: none;
+    background-color: inherit;
+  }
+}
+
+.label{
+  font-size: 14px;
+}

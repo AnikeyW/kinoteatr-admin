@@ -1,0 +1,38 @@
+.seasons{
+
+  .listTitle{
+    display: flex;
+    justify-content: center;
+  }
+
+  .seasonsList{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+
+    .seasonItem{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      background-color: var(--block-bg);
+      border-radius: 0.5rem;
+      padding: 0 0.5rem;
+
+      .info{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .seasonPoster{
+          position: relative;
+          height: 50px;
+          aspect-ratio: 1.777778;
+        }
+
+        .title{}
+      }
+    }
+  }
+}
