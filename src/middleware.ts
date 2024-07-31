@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
-  const isAdminPage = request.url.includes("admin");
+  // const isAdminPage = request.url.includes("admin");
   const isLoginPage = request.url.includes("login");
 
   const refreshToken = request.cookies.get("refreshToken")?.value as string;
@@ -17,7 +17,7 @@ export async function middleware(request: NextRequest) {
     return;
   }
 
-  if (isAdminPage) {
+  if (!isLoginPage) {
     if (!refreshToken && !accessToken) {
       return NextResponse.redirect(new URL("/admin/login", request.url));
     }
