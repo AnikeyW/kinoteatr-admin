@@ -3,25 +3,25 @@ import type { NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const isLoginPage = pathname === '/login';
+  const isLoginPage = pathname === "/login";
 
   const refreshToken = request.cookies.get("refreshToken")?.value as string;
   const accessToken = request.cookies.get("accessToken")?.value as string;
 
   if (isLoginPage) {
     if (accessToken && refreshToken) {
-      return NextResponse.redirect(new URL('/admin', request.url));
+      return NextResponse.redirect(new URL("/admin", request.url));
     }
     return NextResponse.next();
   }
 
   if (!isLoginPage && (!refreshToken || !accessToken)) {
-    return NextResponse.redirect(new URL('/admin/login', request.url));
+    return NextResponse.redirect(new URL("/admin/login", request.url));
   }
 
   if (!isLoginPage) {
     if (!refreshToken && !accessToken) {
-      return NextResponse.redirect(new URL('/admin/login', request.url));
+      return NextResponse.redirect(new URL("/admin/login", request.url));
     }
 
     if (refreshToken && !accessToken) {
@@ -97,7 +97,5 @@ export async function middleware(request: NextRequest) {
 export const config = {
   // matcher: ["/:path*","/admin/:path*", "/login/:path*"],
   // matcher: '/:path*',
-  matcher: [
-  '/((?!api|_next/static|_next/image|favicon.ico).*)',
-]
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };

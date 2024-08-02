@@ -1,9 +1,4 @@
-import {
-  IEpisode,
-  ISeason,
-  ISeries,
-  ISubtitle,
-} from "@/types/Series.types";
+import { IEpisode, ISeason, ISeries, ISubtitle } from "@/types/Series.types";
 import $api from "@/http";
 import { AxiosProgressEvent } from "axios";
 
