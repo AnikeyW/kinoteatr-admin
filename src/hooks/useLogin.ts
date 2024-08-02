@@ -15,7 +15,7 @@ export const useLogin = () => {
       setError(null);
       await authService.login(email.toString(), password.toString());
       setIsLoading(false);
-      router.push("/admin");
+      router.push("/login");
     } catch (e: any) {
       setError(e.message.toString());
     } finally {

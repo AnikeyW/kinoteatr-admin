@@ -1,5 +1,4 @@
 import React from "react";
-import AdminPageLayout from "@/components/adminPage/adminPageLayout/AdminPageLayout";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
@@ -23,7 +22,7 @@ export default function RootLayout({children}: Readonly<{
 
       <body className={inter.className}>
       <MainLayout>
-          <AdminPageLayout>{children}</AdminPageLayout>
+          {children}
       </MainLayout>
 
       </body>

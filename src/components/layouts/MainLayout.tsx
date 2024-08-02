@@ -1,6 +1,5 @@
 import React, { FC, PropsWithChildren } from "react";
 import styles from "./MainLayout.module.scss";
-import Link from "next/link";
 import Container from "@/components/UI/container/Container";
 import MyLink from "@/components/UI/myLink/MyLink";
 
@@ -16,10 +15,6 @@ const MainLayout: FC<PropsWithChildren> = ({ children }) => {
                 <span className={styles.logoPt2}>TV</span>
               </MyLink>
             </div>
-            {/*<nav className={styles.nav}>*/}
-            {/*  <Link href={"/series"}>Сериалы</Link>*/}
-            {/*  <Link href={"/movies"}>Фильмы</Link>*/}
-            {/*</nav>*/}
           </div>
         </Container>
       </header>
