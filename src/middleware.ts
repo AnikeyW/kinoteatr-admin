@@ -15,10 +15,6 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  if (!isLoginPage && (!refreshToken || !accessToken)) {
-    return NextResponse.redirect(new URL("/admin/login", request.url));
-  }
-
   if (!isLoginPage) {
     if (!refreshToken && !accessToken) {
       return NextResponse.redirect(new URL("/admin/login", request.url));
@@ -74,11 +70,10 @@ export async function middleware(request: NextRequest) {
                   cookieOptions.secure = true;
                   break;
                 case "samesite":
-                  cookieOptions.sameSite = "none";
-                  // cookieOptions.sameSite = attrValue.toLowerCase() as
-                  //   | "lax"
-                  //   | "strict"
-                  //   | "none";
+                  cookieOptions.sameSite = attrValue.toLowerCase() as
+                    | "lax"
+                    | "strict"
+                    | "none";
                   break;
               }
             });
@@ -95,7 +90,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // matcher: ["/:path*","/admin/:path*", "/login/:path*"],
-  // matcher: '/:path*',
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };

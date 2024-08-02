@@ -294,32 +294,6 @@ export const seriesService = {
     return await res.json();
   },
 
-  async getSeriesBySlug(slug: string): Promise<ISeries | undefined> {
-    const res = await fetch(
-      process.env.NEXT_PUBLIC_SERVER_URL_API + `series/bySlug/${slug}`,
-    );
-
-    if (!res.ok) {
-      return undefined;
-    }
-    return await res.json();
-  },
-
-  async getSeasonByOrder(
-    seasonOrder: number,
-    seriesSlug: string,
-  ): Promise<ISeason | undefined> {
-    const res = await fetch(
-      process.env.NEXT_PUBLIC_SERVER_URL_API +
-        `season/${seasonOrder}?series_slug=${seriesSlug}`,
-    );
-
-    if (!res.ok) {
-      return undefined;
-    }
-    return await res.json();
-  },
-
   async getSeasonById(seasonId: number): Promise<ISeason> {
     const res = await fetch(
       process.env.NEXT_PUBLIC_SERVER_URL_API + `season/byId/${seasonId}`,
@@ -331,39 +305,9 @@ export const seriesService = {
     return await res.json();
   },
 
-  async getEpisodeByOrder(
-    episodeOrder: number,
-    seasonOrder: number,
-    seriesSlug: string,
-  ): Promise<IEpisode | undefined> {
-    const res = await fetch(
-      process.env.NEXT_PUBLIC_SERVER_URL_API +
-        `episode/byOrder/${episodeOrder}?season_order=${seasonOrder}&series_slug=${seriesSlug}`,
-    );
-
-    if (!res.ok) {
-      return undefined;
-    }
-    return await res.json();
-  },
-
   async getEpisodeById(episodeId: number): Promise<IEpisode | undefined> {
     const res = await fetch(
       process.env.NEXT_PUBLIC_SERVER_URL_API + `episode/byId/${episodeId}`,
-    );
-
-    if (!res.ok) {
-      return undefined;
-    }
-    return await res.json();
-  },
-
-  async getAllEpisodesBySeriesSlug(
-    seriesSlug: string,
-  ): Promise<IEpisode[] | undefined> {
-    const res = await fetch(
-      process.env.NEXT_PUBLIC_SERVER_URL_API +
-        `episode/getAll/?series_slug=${seriesSlug}`,
     );
 
     if (!res.ok) {
